@@ -1,4 +1,5 @@
 const { Client } = require("discord.js");
+const config = require("./config.json")
 const client = new Client({
   intents: 3276799,
 });
@@ -89,4 +90,4 @@ client.on("ready", async () => {
   }
 });
 
-client.login("TOKEN");
+client.login(config.token);
