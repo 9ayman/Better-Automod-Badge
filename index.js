@@ -3,8 +3,6 @@ const client = new Client({
   intents: 3276799,
 });
 
-const config = require("./config.json");
-
 client.on("ready", async () => {
   try {
     const guilds = client.guilds.cache;
