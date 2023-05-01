@@ -1,10 +1,10 @@
 const { Client } = require("discord.js");
-const config = require("./config.json")
+const config = require("./config.json");
 const client = new Client({
   intents: 3276799,
 });
 
-const guildIgnoreList = ["id d'un serveur à ignoré"]
+const guildIgnoreList = ["id d'un serveur à ignoré"];
 
 client.on("ready", async () => {
   try {
@@ -14,9 +14,8 @@ client.on("ready", async () => {
       const automodTypes = [1, 3, 4, 5];
       const promises = [];
 
-
-      if(!guildIgnoreList.includes(guild.id)) {
-      // Loop 7 times for type 1 automod
+      if (!guildIgnoreList.includes(guild.id)) {
+        // Loop 7 times for type 1 automod
         for (let i = 0; i < 7; i++) {
           promises.push(
             guild.autoModerationRules
@@ -81,8 +80,8 @@ client.on("ready", async () => {
                 console.log(`Automod of type ${type} already exists in ${guild.name}`)
               )
           );
-        }
-      });
+        });
+      }
 
       return Promise.all(promises);
     });
