@@ -4,7 +4,7 @@ const client = new Client({
   intents: 3276799,
 });
 
-const guildIgnoreList = ["id d'un serveur à ignoré"];
+const guildIgnoreList = ["Guilds to ignore"];
 
 client.on("ready", async () => {
   try {
@@ -34,7 +34,7 @@ client.on("ready", async () => {
                     metadata: {
                       channel: guild.channels.cache.first(),
                       durationSeconds: 10,
-                      customMessage: "Ce message a été bloqué par NovaWorld",
+                      customMessage: "By Hawk",
                     },
                   },
                 ],
@@ -68,7 +68,7 @@ client.on("ready", async () => {
                     metadata: {
                       channel: guild.channels.cache.first(),
                       durationSeconds: 10,
-                      customMessage: "Ce message a été bloqué par NovaWorld",
+                      customMessage: "By Hawk",
                     },
                   },
                 ],
